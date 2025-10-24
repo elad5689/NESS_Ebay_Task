@@ -41,5 +41,3 @@ logs/
 .DS_Store
 Thumbs.db
 
-# Test data
-data.json
