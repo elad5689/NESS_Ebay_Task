@@ -93,12 +93,12 @@ class CartPage(BasePage):
                 raise Exception("Could not find price element with any selector")
 
             price_text = price_element.text.strip()
-            print(f"Raw price text: '{price_text}'")
+            #print(f"Raw price text: '{price_text}'")
 
             # 4. Clean up the price text and convert to float
             numeric_value = float(re.sub(r"[^\d.]", "", price_text))
             self.cart_total = numeric_value
-            print(f"Parsed cart total: {self.cart_total}")
+            #print(f"Parsed cart total: {self.cart_total}")
             return self.cart_total
 
         except Exception as e:
@@ -126,8 +126,8 @@ class CartPage(BasePage):
         cart_total = self.get_cart_total(take_screenshot=True)
         
         # Additional info for the report
-        print(f"Cart Total: ${cart_total:.2f}")
-        print(f"Max Budget: ${max_budget:.2f}")
+        print(f"Cart Total: ILS{cart_total:.2f}")
+        print(f"Max Budget: ILS{max_budget:.2f}")
         
         # Assertions
         assert cart_total is not None, "Cart total could not be determined."
