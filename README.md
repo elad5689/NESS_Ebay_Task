@@ -40,10 +40,11 @@ This project contains automated tests for eBay shopping flow, including login, p
 
 ## Configuration
 
-1. Create a `data.json` file in the project directory:
-   ```json
+ 1. Update the existing `data.json` file in the project directory with the parameters you wish to use for the test run, for example:
+   ```
+   json
    {
-     "search_term": "product to search",
+     "search_term": "shoes",
      "max_price": 100,
      "item_limit": 3,
      "username": "your_email@example.com",
@@ -63,11 +64,6 @@ This project contains automated tests for eBay shopping flow, including login, p
 ### Basic Test Run
 ```bash
 pytest test_ebay_flow.py --alluredir=allure-results
-```
-
-### Verbose Test Run
-```bash
-pytest test_ebay_flow.py -v --alluredir=allure-results
 ```
 
 ### Viewing Reports
